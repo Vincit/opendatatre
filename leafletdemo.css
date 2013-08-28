@@ -1,5 +1,6 @@
 /* CSS declarations go here */
 html, body, #map {
+  /* Fill the whole view with map. */
   height: 100%;
   margin: 0;
   padding: 0;
