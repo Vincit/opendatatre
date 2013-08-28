@@ -1,7 +1,8 @@
 Open Data TRE workshop
 =======================
 
-Workshopissa tehtävän sovelluksen tavoitetila:
+Workshopissa tehtävän sovelluksen tavoitetila
+-----------
 
 1. Selainsovellus pyytää palvelimelta sijaintitiedot
 2. Palvelin hakee sijaintidatan esim. Open Data TRE:n rajapinnalta
@@ -10,13 +11,16 @@ Workshopissa tehtävän sovelluksen tavoitetila:
 5. Selainsovellus syöttää datan Leafletille GeoJSON muodossa
 6. Sijaintidata näkyy kartalla
 
-Taskit:
+Taskit
+-----------
 
 1. Tee Meteor-tapahtumankäsittelijä, jota kutsutaan kun map-template on luotu käyttöliittymään
   - Katso: http://docs.meteor.com/#template_rendered
 2. Alusta kartta täydelle ruudulle
   - Katso: http://leafletjs.com/examples/quick-start.html
   - Anna tile layerille URL: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+  - Anna Leafletille kuvien polku: 
+    L.Icon.Default.imagePath = '/images';
 3. Tee palvelimelle koodi, joka hakee Open Data TRE:n palvelusta talviliukupaikat
   - Talviliukupaikkojen JSON URL: http://tampere.navici.com/tampere_wfs_geoserver/tampere_iris/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=tampere_iris:WFS_TALVILIUKUPAIKKA&outputFormat=json
   - Voit käyttää Meteor packagea HTTP, joka on jo lisätty projektiin
