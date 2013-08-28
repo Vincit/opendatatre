@@ -19,13 +19,12 @@ Taskit
 2. Alusta kartta täydelle ruudulle
   - Katso: http://leafletjs.com/examples/quick-start.html
   - Anna tile layerille URL: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-  - Anna Leafletille kuvien polku: 
-    L.Icon.Default.imagePath = '/images';
+  - Anna Leafletille kuvien polku: ```L.Icon.Default.imagePath = '/images';```
 3. Tee palvelimelle koodi, joka hakee Open Data TRE:n palvelusta talviliukupaikat
   - Talviliukupaikkojen JSON URL: http://tampere.navici.com/tampere_wfs_geoserver/tampere_iris/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=tampere_iris:WFS_TALVILIUKUPAIKKA&outputFormat=json
   - Voit käyttää Meteor packagea HTTP, joka on jo lisätty projektiin
   - Katso: http://docs.meteor.com/#http_get
-  - HUOM! Jotta Leaflet ymmärtää GeoServerin tuottaman sijaintidatan, tulee URL:n perään lisätä tämä merkkijono: '&srsName=EPSG:4326'
+  - HUOM! Jotta Leaflet ymmärtää GeoServerin tuottaman sijaintidatan, tulee URL:n perään lisätä tämä merkkijono: ```'&srsName=EPSG:4326'```
 4. Tee palvelimelle RPC-metodi käyttäen Meteor.methods-funktiota, joka palauttaa selaimelle sijaintidatan
   - Katso: http://docs.meteor.com/#meteor_methods
 5. Tee client-päähän RPC-metodikutsu käyttäen Meteor.call-funktiota, joka hakee sijaintidatan palvelimelta
