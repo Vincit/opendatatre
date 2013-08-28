@@ -25,12 +25,13 @@ if (Meteor.isClient) {
         };
 
         for (var i=0; i < result.length; ++i) {
-          // Each result item is a GeoJSON FeatureCollection,
-          // which can be given to Leaflet as is.
-          L.geoJson(result[i], {
+          var geoJsonOptions = {
             onEachFeature: setPopup,
             style: { color: 'red', opacity: 1.0 }
-          }).addTo(map);
+          };
+          // Each result item is a GeoJSON FeatureCollection,
+          // which can be given to Leaflet as is.
+          L.geoJson(result[i], geoJsonOptions).addTo(map);
         }
       }
     });
